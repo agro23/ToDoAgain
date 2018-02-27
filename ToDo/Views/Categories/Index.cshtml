@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+@if ( (Model.Count != 0) && (Model != null))
+{
+  <ul>
+    @foreach (var category in Model)
+    {
+      <li><a href="/categories/@category.GetId()">@category.GetName()</a></li>
+    }
+  </ul>
+}
+<h4><a href="/items/new">Add new item</a></h4>
+<h4><a href="/categories/new">Add new category</a></h4>
+<h4><a href="/">Return home</a></h4>
